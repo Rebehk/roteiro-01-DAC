@@ -1,0 +1,24 @@
+<h1>Boas-vindas ao <span class="text-success">Mini Bios</span>!</h1>
+
+        
+<div>
+    {{#each users}}
+        <a href="/users/{{getUsername this}}">
+            <div class="btn btn-outline-success users" style="margin-bottom: 10px;">
+                <div class="card-heading bg-outline-success">
+                    <a class="nav-link" href="/users/{{getUsername this}}">
+                        {{getName this}}
+                    </a>
+                </div>
+                {{#if (getBio this)}}
+                    <div class="card-body">
+                        <a class="nav-link" href="/users/{{getUsername this}}">
+                        {{getBio this}}
+                    </a>
+                                
+                    </div>
+                {{/if}}
+            </div>
+        </a>
+    {{/each}}
+</div>
