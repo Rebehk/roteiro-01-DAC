@@ -1,6 +1,23 @@
 # roteiro-01-DAC
 
-atividade de Desenvolvimento de Aplicações Corporativas
+Atividade de Desenvolvimento de Aplicações Corporativas
+
+## Pré-requisitos
+
+:warning: [Docker](https://www.docker.com/)
+:warning: [MongoDB Atlas](https://www.mongodb.com/atlas)
+
+Configurando:
+
+- Instale o Docker na sua maquina
+
+- clone este repositorio [git clone https://github.com/Rebehk/roteiro-01-DAC.git]
+
+  $ docker build -t app .
+
+  $ docker run -d -p 3000:3000 app
+
+- Crie um arquivo .env com a varivel MONGO_URL com a string de conexão do MongoDB Atlas
 
 ### respostas da atividade
 
