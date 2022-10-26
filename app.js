@@ -7,12 +7,12 @@ const passport = require("passport");
 const path = require("path");
 const session = require("express-session");
 const Handlebars = require("express-handlebars");
-
+require("dotenv").config()
 const setUpPassport = require("./setuppassport");
 const routes = require("./routes");
 
 const app = express();
-mongoose.connect("mongodb://localhost:27017/test");
+mongoose.connect(process.env.MONGO_URL);
 setUpPassport();
 
 app.set("port", process.env.PORT || 3000);
